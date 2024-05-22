@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eVoting Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <nav id="navbar">
+        <a href="index.html"><img src="images/Logo.png" alt="eVote-ing Logo" class="logo"></a>
+        <ul>
+            <li><a href="index.html" class="hover-text">Home</a></li>
+            <li><a href="Dashboard.html" class="hover-text">Dashboard</a></li>
+            <li><a href="AboutUs.html" class="hover-text">About Us</a></li>
+            <li><a href="#" class="hover-text">Help</a></li>
+        </ul>
+    </nav>
+    <div class="header">
+        <h1>Dashboard</h1>
+        <div class="block-1">
+            <h2>การประชุมของโรงเรียน</h2>
+            <h3>การลงคะแนนให้ครู</h3>
+            <p>1.<br>
+                2.<br>
+                3.<br>
+                4.<br>
+                5.<br>
+            </p>
+            <button class="Vote">Vote</button>
+            <button class="Information">Information</button>
+            <div id="votingOptions" class="hidden">
+                <h3>Vote for a Teacher</h3>
+                <label><input type="radio" name="vote" value="Teacher1"> Teacher 1</label><br>
+                <label><input type="radio" name="vote" value="Teacher2"> Teacher 2</label><br>
+                <label><input type="radio" name="vote" value="Teacher3"> Teacher 3</label><br>
+                <button class="submitVote">Submit Vote</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let navbar = document.getElementById('navbar');
+        window.onscroll = function() {
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        };
+
+        document.querySelector('.Vote').addEventListener('click', function() {
+            document.getElementById('votingOptions').classList.toggle('hidden');
+        });
+
+        document.getElementById('login').addEventListener('submit', function(event) {
+            document.getElementById('loginButton').style.display = 'none';
+        });
+    </script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

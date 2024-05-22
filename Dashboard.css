@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #132E52;
+}
+
+.body {
+    background-color: #d5c3fc;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    border-bottom: 3px solid #132E52;
+    z-index: 10;
+    font-weight: 900;
+    background: transparent;
+    transition: background 0.3s;
+}
+
+nav.scrolled {
+    background-color: #d5c3fc;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.hover-text {
+    position: relative;
+    display: inline-block;
+    color: #132E52;
+    font-size: 18px;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.hover-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.hover-text:hover::after {
+    width: 100%;
+}
+
+nav .logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+.header {
+    margin: 100px;
+    margin-top: 200px;
+    border-radius: 40px;
+    border: 3px solid #132E52;
+    color: #132E52;
+    padding: 20px;
+    background-color: transparent; /* Make the background transparent */
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.block-1 {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* White background with transparency */
+    margin-right: 80%;
+    border-radius: 40px;
+    border: 3px solid #132E52;
+}
+
+.Vote, .Information {
+    background: #fff;
+    color: #132E52;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    border: 3px solid #132E52;
+    cursor: pointer;
+    background-color: #EFDFFF;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Vote:hover, .Information:hover {
+    background-color: #132E52;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.scrolled {
+    background-color: #d5c3fc;
+}
+
+.submitVote {
+    background: #fff;
+    color: #132E52;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    border: 3px solid #132E52;
+    cursor: pointer;
+    background-color: #EFDFFF;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submitVote:hover {
+    background-color: #132E52;
+    color: #fff;
+}
